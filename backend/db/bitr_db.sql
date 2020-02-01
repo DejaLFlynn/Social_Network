@@ -7,12 +7,14 @@ DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS posts;
 DROP TABLE IF EXISTS comments;
 DROP TABLE IF EXISTS dislikes;
+DROP TABLE IF EXISTS haters;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    name TEXT,
+    name TEXT, 
     age INTEGER,
-    email TEXT not null UNIQUE
+    email TEXT not null UNIQUE,
+    photo_url TEXT
 );
 
 CREATE TABLE posts (
@@ -34,4 +36,10 @@ CREATE TABLE dislikes (
     id SERIAL PRIMARY KEY,
     dislike_user INTEGER REFERENCES users(id),
     dislike_post INTEGER REFERENCES posts(id)
+);
+
+CREATE TABLE haters (
+  id SERIAL PRIMARY KEY, 
+  curr_user INTEGER REFERENCES users(id), 
+  hater_id INTEGER REFERENCES users(id) 
 );
