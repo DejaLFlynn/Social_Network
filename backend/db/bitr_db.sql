@@ -13,7 +13,8 @@ CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name TEXT, 
     age INTEGER,
-    email TEXT not null UNIQUE
+    email TEXT not null UNIQUE,
+    photo_url TEXT
 );
 
 CREATE TABLE posts (
