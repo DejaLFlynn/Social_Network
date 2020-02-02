@@ -53,7 +53,12 @@ const getAllUsers = async (req,res,next) => {
 
 const getUserSearch = async (req,res,next) => {
     try {
-        let users = await db.any("SELECT * from users WHERE use LIKE %$1", req.params.id)
+        let users = await db.any("SELECT * from users WHERE username LIKE %$1", req.body)
+        res.status(200).json({
+            users,
+            status: "Success",
+            message: "Users Fetched"
+        })
     } catch(error) {
         next(error)
     }
