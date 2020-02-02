@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const port = 3000;
 const usersRouter = require("./routes/Users/users")
 const postsRouter = require("./routes/Posts/posts")
-const commentsRouter = require("./routes/Comments/posts")
+const commentsRouter = require("./routes/Comments/comments")
 const dislikesRouter = require("./routes/Dislikes/dislikes")
 const app = express();
 
