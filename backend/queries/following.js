@@ -6,7 +6,7 @@ const getHaters = async (req,res,next) => {
         res.status(200).json({
             haters,
             status: "Success",
-            message: "Users Fetched"
+            message: "Haters Fetched"
         })
     } catch(error) {
         next(error)
