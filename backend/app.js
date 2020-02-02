@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const port = 3000;
 const usersRouter = require("./routes/Users/users")
 const postsRouter = require("./routes/Posts/posts")
-
+const commentsRouter = require("./routes/Comments/posts")
 const app = express();
 
 app.use(cors());
@@ -13,5 +13,6 @@ app.use(bodyParser.json());
 
 app.use("/users", usersRouter)
 app.use("/posts", postsRouter)
+app.use("/comments", commentsRouter)
 
 app.listen(port, () => console.log("server running on port ", port))
