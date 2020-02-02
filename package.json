@@ -2,7 +2,7 @@
   "name": "social_network",
   "version": "1.0.0",
   "description": "Group Project, Kevin, Nilber, Danielle and Deja",
-  "main": "index.js",
+  "main": "./backend/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,6 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "pg-promise": "^10.3.5"
+    "pg-promise": "^10.4.0"
   }
 }
