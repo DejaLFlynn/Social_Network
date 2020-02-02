@@ -52,4 +52,15 @@ const getComment = async(request, response,next)=>{
         next(err)
     }
 }
-module.exports = {getAllComments,getComment,addComment,deleteComment}
+const updateComments =async(request, response,next)=>{
+    try{
+        db.none("UPDATE comments SET body = '$1' WHERE user_comments_id = $2 AND post_comments_id =$3", [request.body.body. request.params_comments_id, request.params.post_id])
+        response.status(200).json({
+            status: "success",
+            message: "COMMENT UPDATED"
+        })
+    }catch(err){
+        next(err)
+    }
+}
+module.exports = {getAllComments,getComment,addComment,deleteComment, updateComments}
