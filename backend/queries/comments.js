@@ -11,6 +11,7 @@ const addComment = async(request,response,next)=>{
         next(err)
     }
 }
+
 const deleteComment = async(request,response,next)=>{
     try{
         await db.none("DELETE FROM comments WHERE id = $1 ", request.params.id)
@@ -52,6 +53,7 @@ const getComment = async(request, response,next)=>{
         next(err)
     }
 }
+
 const updateComments =async(request, response,next)=>{
     try{
         db.none("UPDATE comments SET body = '$1' WHERE user_comments_id = $2 AND post_comments_id =$3", [request.body.body. request.params_comments_id, request.params.post_id])
@@ -63,4 +65,5 @@ const updateComments =async(request, response,next)=>{
         next(err)
     }
 }
+
 module.exports = {getAllComments,getComment,addComment,deleteComment, updateComments}
