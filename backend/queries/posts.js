@@ -13,6 +13,18 @@ const createPost = async (req, res, next) => {
   }
 }
 
+const deletePost = async (req, res, next) => {
+  try {
+    await db.none("DELETE FROM posts WHERE id = $1", req.params.id)
+    res.status(200).json({
+        status: "Success",
+        message: "Post Deleted"
+    })
+  } catch(err) {
+    next(err)
+  }
+}
+
 const getPostsForUser = async (req, res, next) => {
   try {
     let posts = await db.any("SELECT * FROM posts WHERE user_posts_id = $1", req.params.id);
@@ -26,4 +38,4 @@ const getPostsForUser = async (req, res, next) => {
   }
 }
 
-module.exports = {getPostsForUser, createPost}
+module.exports = {getPostsForUser, createPost, deletePost}
