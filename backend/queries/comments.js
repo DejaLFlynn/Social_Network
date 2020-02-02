@@ -1,8 +1,8 @@
 const db = require("../db/index")
 
-const addComment = async(req,res,next)=>{
+const addComment = async(request,response,next)=>{
     try{
-        await db.one("INSERT INTO comments (user_comments_id, post_comment_id, body)VALUES ${user_comments_id}${post_comment_id}${body}", req.body)
+        await db.one("INSERT INTO comments (user_comments_id, post_comment_id, body)VALUES ${user_comments_id}${post_comment_id}${body}", request.body)
         response.status(200).json({
             status: "success",
             message: "NEW COMMENT" 
@@ -11,7 +11,8 @@ const addComment = async(req,res,next)=>{
         next(err)
     }
 }
-const deleteComment = async(req,res,next)=>{
+
+const deleteComment = async(request,response,next)=>{
     try{
         await db.none("DELETE FROM comments WHERE id = $1 ", request.params.id)
         response.status(200).json({
