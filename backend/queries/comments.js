@@ -11,7 +11,6 @@ const addComment = async(request,response,next)=>{
         next(err)
     }
 }
-
 const deleteComment = async(request,response,next)=>{
     try{
         await db.none("DELETE FROM comments WHERE id = $1 ", request.params.id)
