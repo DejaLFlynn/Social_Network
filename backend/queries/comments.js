@@ -26,7 +26,7 @@ const deleteComment = async(request,response,next)=>{
 const getAllComments =async(request,response,next) =>{
     try{
 
-        let comments=await db.any("SELECT * FROM comments")
+        let comments = await db.any("SELECT * FROM comments")
         response.status(200).json({
             comments, 
             status: "success",
