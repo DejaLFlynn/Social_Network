@@ -22,6 +22,7 @@ const deleteComment = async(request,response,next)=>{
         next(err)
     }
 }
+
 const getAllComments =async(request,response,next) =>{
     try{
 
