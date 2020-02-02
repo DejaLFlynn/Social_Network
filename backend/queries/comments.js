@@ -2,7 +2,7 @@ const db = require("../db/index")
 
 const addComment = async(request,response,next)=>{
     try{
-        await db.one("INSERT INTO comments (user_comments_id, post_comment_id, body)VALUES ${user_comments_id}${post_comment_id}${body}", request.body)
+        await db.one("INSERT INTO comments (user_comments_id, post_comment_id, body) VALUES ${user_comments_id}, ${post_comment_id}, ${body}", request.body)
         response.status(200).json({
             status: "success",
             message: "NEW COMMENT" 
