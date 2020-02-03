@@ -1,11 +1,59 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <script src="./index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="./images/lemon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="master.css"> </link>
+    <link rel="stylesheet" href="normal.css"></link>
+    
+    <title> BITR </title>
 </head>
 <body>
-    
+    <div class="homeContainer">
+        <div class="left">
+            <div id="image"></div>
+            
+            <ul class="leftSideText">
+                <li> BITR </li>
+                <li> Because When Life Gives You Lemons, </li>
+                <li> You Throw Them Back! </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="formSection">
+                <form action="submit">
+                    <div>
+                        <h1> Sign In</h1>
+                        <hr>
+                        <div class="formHolder">
+                            <div class="userInput">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" placeholder="Enter Username" id="" required>
+                            </div>
+
+                            <div class="userInput">
+                                <label for="password">Password</label>
+                                <input type="text" name="password" placeholder="Enter Password" id="">
+                            </div>
+            
+                            <button type="button"> Sign In </button>
+                            <p class="centered">Don't have an account? <a href="/"> Sign Up</a></p>
+                        </div>
+                    </div>
+                </form>
+                <footer>
+                    <ul class="footer">
+                        <li><a href=""> About </a></li>
+                        <li><a href=""> Developers </a></li>
+                        <li id="copyright"> &copy;2020 BITR </li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
