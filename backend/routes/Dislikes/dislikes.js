@@ -1,6 +1,7 @@
 const dislikes = require('express').Router();
-const { createDislike, removeDislike } = require("../../queries/dislikes");
+const { createDislike, removeDislike, showDislikes } = require("../../queries/dislikes");
 
+dislikes.get("/", showDislikes);
 dislikes.post("/", createDislike);
 dislikes.delete("/:id", removeDislike);
 

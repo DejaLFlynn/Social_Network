@@ -13,9 +13,22 @@ const createDislike = async(req, res, next) => {
     }
 }
 
+const showDislikes = async(req, res, next) => {
+    try{
+        let dislikes = await db.any("SELECT * FROM dislikes")
+        res.status(200).json({
+            dislikes, 
+            status: "success",
+            message: "ALL DISLIKES" 
+    })
+        } catch (err) {
+            next(err)
+    }
+}
+
 const removeDislike = async(request,response,next)=>{
     try{
-        await db.none("DELETE FROM dislikes WHERE id = $1 ", request.params.id)
+        await db.none("DELETE FROM dislikes WHERE dislike_post = $1 ", request.params.id)
         response.status(200).json({
             status: "success",
             message: "DISLIKED REMOVED" 
@@ -25,4 +38,4 @@ const removeDislike = async(request,response,next)=>{
     }
 }
 
-module.exports = {createDislike, removeDislike}
+module.exports = {createDislike, removeDislike, showDislikes}

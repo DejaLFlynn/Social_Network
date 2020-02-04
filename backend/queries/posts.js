@@ -38,4 +38,17 @@ const getPostsForUser = async (req, res, next) => {
   }
 }
 
-module.exports = {getPostsForUser, createPost, deletePost}
+const getAllPosts = async (req, res, next) => {
+  try {
+    let posts = await db.any("SELECT * FROM posts");
+    res.status(200).json({
+      posts,
+      status: "success",
+      message: "user posts retrieved"
+    })
+  } catch(err) {
+    next(err);
+  }
+}
+
+module.exports = {getPostsForUser, createPost, deletePost, getAllPosts}
