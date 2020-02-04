@@ -1,6 +1,12 @@
 const userFollowing = require("express").Router({mergeParams: true})
-const {getHaters} = require("../../../queries/following")
+const {addHater, removeHater, getHaters, getHaterFeed} = require("../../../queries/following")
 
-userFollowing.get("/", getHaters) 
+userFollowing.post("/", addHater)
+
+userFollowing.delete("/", removeHater)
+
+userFollowing.get("/", getHaters)
+
+userFollowing.get("/", getHaterFeed)
 
 module.exports = userFollowing
