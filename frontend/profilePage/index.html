@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./index.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./master.css"> </link>
-    <link rel="stylesheet" href="../normal.css"></link>
-    
-    <title> BITR </title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./master.css">
+  </link>
+  <link rel="stylesheet" href="../normal.css">
+  </link>
+
+  <title> BITR Profile</title>
 </head>
+
 <body>
-  
+  <nav>
+    <button id="homeFeed">HOME</button>
+    <form action="submit">
+      <input id="searchInput" type="text">
+    </form>
+    
+  </nav>
+  <header>
+    <div id="countsDiv">
+      <p id="followerCount">Follower Count</p>
+      <button id="follow"></button>
+      <p id="dislikeCount">Dislike Count</p>
+    </div>
+    <img src="" alt="">
+
+  </header>
+  <div id="postsDiv">
+    <img src="" alt="">
+    <input id="captionInput"type="text" Enter caption>
+    <button id="addPost">Add Post</button>
+    <p id="caption"></p>
+    <button id="dislike"></button>
+    <ul></ul>
+  </div>
 </body>
+
 </html>
