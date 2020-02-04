@@ -46,9 +46,11 @@ const getHaterFeed = async (req,res,next) => {
             status: "Success",
             message: "Hater Feed Extracted"
         })
+    }catch(error){
+        next(error)
     }
 }
 
 
 
-module.exports = {getHaters}
+module.exports = {getHaters,getHaterFeed,removeHater,addHater}
