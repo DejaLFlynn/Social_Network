@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS haters;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name TEXT, 
-    username TEXT not null UNIQUE,
+    -- username TEXT not null UNIQUE,
     age INTEGER,
     email TEXT not null UNIQUE,
     photo_url TEXT

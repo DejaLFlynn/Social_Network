@@ -13,4 +13,16 @@ const createDislike = async(req, res, next) => {
     }
 }
 
-module.exports = {createDislike}
+const removeDislike = async(request,response,next)=>{
+    try{
+        await db.none("DELETE FROM dislikes WHERE id = $1 ", request.params.id)
+        response.status(200).json({
+            status: "success",
+            message: "DISLIKED REMOVED" 
+        })
+    }catch(err){
+        next(err)
+    }
+}
+
+module.exports = {createDislike, removeDislike}
