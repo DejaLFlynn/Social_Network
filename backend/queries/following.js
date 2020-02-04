@@ -2,22 +2,25 @@ const db = require("../db/index")
 
 const addHater = async (req,res,next) => {
     try {
-        let hater = await db.none("INSERT into haters (curr_user, hater_id) VALUES (${curr_user}, ${hater_id}", req.body)
+        let hater = await db.none("INSERT into haters (curr_user, hater_id) VALUES (${curr_user}, ${hater_id}", [req.params.id, req.body])
         res.status(200).json({
             status: "Success",
             message: "Following Hater"
         })
+    } catch(error) {
+        next(error)
     }
 }
 
-
 const removeHater = async (req,res,next) => {
     try {
-        let hater = await db.none("DELETE from haters WHERE id = $1", req.params.id)
+        let hater = await db.none("DELETE from haters WHERE curr_user = $1 AND hater_id = $2", [req.params.id, req.body])
         res.status(200).json({
             status: "Success",
             message: "Unfollowed Hater"
         })
+    } catch(error) {
+        next(error)
     }
 }
 
