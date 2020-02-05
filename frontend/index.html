@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./index.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js" async></script>
     <link rel="icon" href="./images/lemon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="master.css"> </link>
@@ -26,22 +26,22 @@
         </div>
         <div class="right">
             <div class="formSection">
-                <form action="submit">
+                <form action="submit" id="form">
                     <div>
                         <h1> Sign In </h1>
                         <hr>
                         <div class="formHolder">
                             <div class="userInput">
                                 <label for="username"> Username </label>
-                                <input type="text" name="username" placeholder="Enter Username" id="" required>
+                                <input type="text" name="username" placeholder="Enter Username" id="username" required>
                             </div>
 
                             <div class="userInput">
                                 <label for="password"> Password </label>
-                                <input type="text" name="password" placeholder="Enter Password" id="">
+                                <input type="password" name="password" placeholder="Enter Password" id="">
                             </div>
             
-                            <button type="button"> Sign In </button>
+                            <button class="button signIn" type="button"> Sign In </button>
                             <p class="centered"> Don't have an account? <a href="./signUpPage/index.html"> Sign Up</a></p>
                         </div>
                     </div>
