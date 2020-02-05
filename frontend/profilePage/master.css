@@ -1,0 +1,12 @@
+body, nav{
+    background-image: url("https://jooinn.com/images/lemon-slice-2.jpg" );
+    background-repeat: no-repeat;
+    background-size: 800px, 800px;
+    vertical-align: middle;
+  
+}
+ #homeFeed{
+    display: flex; 
+    justify-content: center;
+
+}
