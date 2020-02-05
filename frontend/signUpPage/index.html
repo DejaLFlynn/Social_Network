@@ -18,10 +18,10 @@
         </div>
         <div class="right">
             <div class="formSection">
-                <form action="submit">
-                        <h1> Sign up for an Account </h1>
-                        <hr>
-                        <div class="formHolder">
+                <h1> Sign up for an Account </h1>
+                <hr>
+                <div class="formHolder">
+                        <form>
                             <div class="userInput">
                                 <label value="email"> Email </label>
                                 <input type="text" name="email" placeholder="Enter Email" id="email" required>
@@ -39,13 +39,21 @@
                             
                             <div class="userInput">
                                 <label value="Age"> Age </label>
-                                <input type="number" name="age" placeholder="Enter Age" id="age">
+                                <input type="number" name="age" placeholder="Enter Age" id="age" required>
+                            </div>
+
+                            <div class="userInput">
+                                <label value="photo_url"> Profile Photo URL </label>
+                                <input type="text" name="photo_url" placeholder="Enter Link to Your Profile Photo" id="photo">
                             </div>
             
-                            <button type="button"> Sign Up </button>
-                            <p class="centered">Already have an account? <a href="../index.html"> Sign In</a></p>
+                            <button type="submit"> Sign Up </button>
+                        </form>
                     </div>
-                </form>
+                    <br>
+                    <div>
+                    <p class="centered">Already have an account? <a href="../index.html"> Sign In</a></p>
+                    </div>
             </div>
         </div>
     <footer>
