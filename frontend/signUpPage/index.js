@@ -24,5 +24,4 @@ form.addEventListener("submit", async (event) => {
       errorAlert.innerText = "Please Enter a Valid Username and Email"
     }
   form.reset()
-
 })
