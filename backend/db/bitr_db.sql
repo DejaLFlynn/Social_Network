@@ -44,6 +44,7 @@ CREATE TABLE haters (
   curr_user INTEGER REFERENCES users(id), 
   hater_id INTEGER REFERENCES users(id) 
 );
+
 INSERT INTO users(name, username,age,email,photo_url)
 VALUES('brutus','leoBrut','27','brutus@pursuit.org','https://thumbs.dreamstime.com/z/funny-lemon-sun-glasses-14155485.jpg' ),
       ('dani', 'danidani', '26', 'danielle@pursuit.org','https://previews.123rf.com/images/maxsheb/maxsheb1707/maxsheb170700797/82194753-funny-lemon.jpg'),

@@ -14,9 +14,11 @@ fieldset{border-width:0; padding:0; margin:0;}
 html {
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 body {
+  height: 100%;
   padding: 0px;
   margin: 0px;
   display: grid;
@@ -37,42 +39,57 @@ textarea, select, input, button {
 p {
   font-weight: 400;
 }
+
 .centered {
   text-align: center;
 }
 
-
 .left {
+  min-height: 100%;
   grid-area: left;
   background-image: url("../images/ShadyTIme.png");
-  background-size: 100%;
+  background-size: 75%;
   background-position: center;
   background-repeat: no-repeat; 
   background-color: #46B3EA;
 }
 
-.userInput {
-  padding: 25px;
-}
+
+
 .right {
+  min-height: 100%;
   grid-area: right;
   /* flex-grow: 1; */
   background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 50px;
+  padding: 50px
 }
+
+.formHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formSection {
+  width: 75%
+}
+
 .userInput {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+  padding: 10px
 }
 
 .userInput input {
   border: none;
   border-bottom: 1px solid gray;
 }
+
 label {
   font-size: 12px;
   color: grey;
@@ -94,6 +111,12 @@ button {
 button:hover{
   background-color: #f6b605;
   transition: all 1s;
+}
+
+.error {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold
 }
 
 footer {
@@ -118,6 +141,7 @@ footer #copyright {
 }
 
 .footer {
+  width: 100%;
   list-style-type: none;
   font-family: "Poppins", "sans-serif";
   font-size: 12px;
@@ -128,3 +152,6 @@ footer #copyright {
   padding: 0 50px;
 }
 
+a:hover {
+  text-decoration: underline;
+}
