@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./index.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js" async></script>
     <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./master.css"> </link>
     <link rel="stylesheet" href="../normal.css"></link>
@@ -24,22 +24,22 @@
                         <div class="formHolder">
                             <div class="userInput">
                                 <label value="email"> Email </label>
-                                <input type="text" name="email" placeholder="Enter Email" id="" required>
+                                <input type="text" name="email" placeholder="Enter Email" id="email" required>
                             </div>
                             
                             <div class="userInput">
                                 <label value="Full Name"> Full Name </label>
-                                <input type="text" name="fullName" placeholder="Enter Full Name" id="" required>
+                                <input type="text" name="fullName" placeholder="Enter Full Name" id="name" required>
                             </div>
                             
                             <div class="userInput">
                                 <label value="Username"> Username </label>
-                                <input type="text" name="username" placeholder="Enter Username" id="" required>
+                                <input type="text" name="username" placeholder="Enter Username" id="username" required>
                             </div>
                             
                             <div class="userInput">
                                 <label value="Age"> Age </label>
-                                <input type="text" name="age" placeholder="Enter Age" id="">
+                                <input type="number" name="age" placeholder="Enter Age" id="age">
                             </div>
             
                             <button type="button"> Sign Up </button>

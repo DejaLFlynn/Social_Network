@@ -44,9 +44,6 @@ p {
 
 .left {
   grid-area: left;
-  /* flex-grow: 1; */
-  display: flex;
-  justify-content: center;
   background-image: url("../images/ShadyTIme.png");
   background-size: 100%;
   background-position: center;
@@ -101,6 +98,7 @@ button:hover{
 
 footer {
   grid-area: footer;
+  height: 100%;
   background-color: white;
   padding: 0 10px;
   padding-top: 15px;
