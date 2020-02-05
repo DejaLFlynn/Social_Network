@@ -2,9 +2,8 @@ const db = require("../db/index")
 
 const createUser = async (req,res,next) => {
     try {
-        let user = await db.none("INSERT into users (name, age, email, photo_url) VALUES (${name}, ${age}, ${email}, ${photo_url})", req.body)
+        let user = await db.none("INSERT into users (name, username, age, email, photo_url) VALUES (${name}, ${username}, ${age}, ${email}, ${photo_url})", req.body)
         res.status(200).json({
-            user,
             status: "Success",
             message: "New User Created"
         })
