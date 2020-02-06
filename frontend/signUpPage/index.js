@@ -18,8 +18,9 @@ form.addEventListener("submit", async (event) => {
           age: age.value,
           photo_url: photo.value
           });
-        window.location.href = "../HomePage/index.html"
         sessionStorage.setItem("currentUser", username.value)
+        sessionStorage.setItem("id", res.data.user.id)
+        window.location.href = "../HomePage/index.html"
     } catch (error) {  
       errorAlert.innerText = "Please Enter a Valid Username and Email"
     }
