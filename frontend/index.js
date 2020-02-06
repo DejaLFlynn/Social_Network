@@ -5,12 +5,9 @@
   // button.addEventListener("onclick")
   
 
-  // Set sessionStorage with form values
-  // Check user exists - Get on database
-  // If Does not exist - hvae fucntion that creates a div "user does not exist"
-  // button on click - takes you to home page
   
-  let button = document.querySelector(".signIn");
+  //let button = document.querySelector(".signIn");
+  
   let form = document.querySelector("#form");
   let p = document.querySelector("#invalidLogin");
   form.addEventListener("submit", (event) => {
