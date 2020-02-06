@@ -150,6 +150,12 @@ button:hover{
   transition: all 1s;
 }
 
+#invalidLogin {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold
+}
+
 footer {
   grid-area: footer;
   background-color: white;

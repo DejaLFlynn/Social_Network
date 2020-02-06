@@ -1,43 +1,24 @@
-
-
-  
-  
-  // button.addEventListener("onclick")
-  
-
-  
-  //let button = document.querySelector(".signIn");
-  
-  let form = document.querySelector("#form");
-  let p = document.querySelector("#invalidLogin");
-  form.addEventListener("submit", (event) => {
-    p.innerHTML = "";
-    event.preventDefault();
-        let username = document.querySelector("#username").value;
-        sessionStorage.setItem("currentUser", username);
-        
-    const getUserLogin = async () => {
+let form = document.querySelector("#form");
+let p = document.querySelector("#invalidLogin");
+    
+const getUserLogin = async (username) => {
       try {
-        let res = await axios.get(`https://localhost3000/users`);
-          let currentUser = res.data
-          debugger
-        if (username === res.data.id.username) {
-          debugger
-          console.log("you logged in ")
-        } else {
-          p.innerHTML = "Sorry invalid username try again or sign up"
-          
-        }
-        
+        let res = await axios.get(`http://localhost:3000/users/${username}`);
+        if (res.data.user) {
+          sessionStorage.setItem("currentUser", username);
+          sessionStorage.setItem("id", res.data.user.id)
+          window.location.href = "./HomePage/index.html"
+        } 
       } catch (err) {
-        console.log(err)
+        p.innerHTML = "Please Enter a Valid Username or Sign the F*ck Up"
       }
-      form.reset();
-    }
-    getUserLogin()
-    })
-  // button.addEventListener("onclick")
-  // Set sessionStorage with form values
-  // Check user exists - Get on database
-  // If Does not exist - hvae fucntion that creates a div "user does not exist"
-  // button on click - takes you to home page
+}
+  
+form.addEventListener("submit", (event) => {
+  p.innerHTML = "";
+  event.preventDefault();
+  let username = document.querySelector("#username").value;
+  getUserLogin(username)
+  debugger
+  form.reset()
+})
