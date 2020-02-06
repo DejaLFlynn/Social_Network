@@ -19,6 +19,5 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   let username = document.querySelector("#username").value;
   getUserLogin(username)
-  debugger
   form.reset()
 })
