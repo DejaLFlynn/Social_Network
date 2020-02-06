@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./index.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js" async></script>
     <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./master.css"> </link>
     <link rel="stylesheet" href="../normal.css"></link>
@@ -13,49 +13,56 @@
     <title> BITR </title>
 </head>
 <body>
-    <div class="homeContainer">
         <div class="left">
             <div id="image"></div>
-          
         </div>
         <div class="right">
-            <div class="formSection">
-                <form action="submit">
-                        <h1> Sign up for an account </h1>
-                        <hr>
-                        <div class="formHolder">
+            <div class="formHolder">
+                <h1> Sign up for an Account </h1>
+                <hr>
+                <div class="formSection">   
+                        <form>
                             <div class="userInput">
                                 <label value="email"> Email </label>
-                                <input type="text" name="email" placeholder="Enter Email" id="" required>
+                                <input type="text" name="email" placeholder="Enter Email" id="email" required>
                             </div>
                             
                             <div class="userInput">
                                 <label value="Full Name"> Full Name </label>
-                                <input type="text" name="fullName" placeholder="Enter Full Name" id="" required>
+                                <input type="text" name="fullName" placeholder="Enter Full Name" id="name" required>
                             </div>
                             
                             <div class="userInput">
                                 <label value="Username"> Username </label>
-                                <input type="text" name="username" placeholder="Enter Username" id="" required>
+                                <input type="text" name="username" placeholder="Enter Username" id="username" required>
                             </div>
                             
                             <div class="userInput">
                                 <label value="Age"> Age </label>
-                                <input type="text" name="age" placeholder="Enter Age" id="">
+                                <input type="number" name="age" placeholder="Enter Age" id="age" required>
                             </div>
-            
-                            <button type="button"> Sign Up </button>
-                            <p class="centered">Already have an account? <a href="../index.html"> Sign In</a></p>
-                    </div>
-                </form>
+
+                            <div class="userInput">
+                                <label value="photo_url"> Profile Photo URL </label>
+                                <input type="text" name="photo_url" placeholder="Enter Link to Your Profile Photo" id="photo">
+                            </div>
+                            <div>
+                                <button type="submit"> Sign Up </button>
+                            </div>
+                        </form>
+                </div>
+                <br>
+                <div>
+                    <p class="centered">Already have an account? <a href="../index.html"> Sign In</a></p>
+                    <p class="error centered"></p>
+                </div>
             </div>
         </div>
-    </div>
     <footer>
         <ul class="footer">
             <li><a href=""> About </a></li>
             <li><a href=""> Developers </a></li>
-            <li id="copyright"> &copy;2020 BITR </li>
+            <li id="copyright"> &copy;2020 The Motherf*cking Team </li>
         </ul>
     </footer>
 </body>

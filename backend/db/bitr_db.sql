@@ -49,12 +49,21 @@ CREATE TABLE haters
     curr_user INTEGER REFERENCES users(id),
     hater_id INTEGER REFERENCES users(id)
 );
+<<<<<<< HEAD
 INSERT INTO users
     (name, username,age,email,photo_url)
 VALUES('brutus', 'leoBrut', '27', 'brutus@pursuit.org', 'https://thumbs.dreamstime.com/z/funny-lemon-sun-glasses-14155485.jpg' ),
     ('dani', 'danidani', '26', 'danielle@pursuit.org', 'https://previews.123rf.com/images/maxsheb/maxsheb1707/maxsheb170700797/82194753-funny-lemon.jpg'),
     ('deja', 'sunshine', '50', 'deja@pursuit.org', 'https://i.pinimg.com/originals/90/8e/2e/908e2e02b27e4b02550e6e2f8c623b9a.jpg'),
     ('nilber', 'sharky', '24', 'nilber@pursuit.org', 'https://4.bp.blogspot.com/-d4U4_9VYnr0/T3CZEAYeCLI/AAAAAAAABVs/FgpS-ileFOo/s1600/Funny+Lemon+Wallpapers+4.jpg' );
+=======
+
+INSERT INTO users(name, username,age,email,photo_url)
+VALUES('brutus','leoBrut','27','brutus@pursuit.org','https://thumbs.dreamstime.com/z/funny-lemon-sun-glasses-14155485.jpg' ),
+      ('dani', 'danidani', '26', 'danielle@pursuit.org','https://previews.123rf.com/images/maxsheb/maxsheb1707/maxsheb170700797/82194753-funny-lemon.jpg'),
+      ('deja', 'sunshine', '50', 'deja@pursuit.org','https://i.pinimg.com/originals/90/8e/2e/908e2e02b27e4b02550e6e2f8c623b9a.jpg'),
+      ('nilber', 'sharky','24', 'nilber@pursuit.org','https://4.bp.blogspot.com/-d4U4_9VYnr0/T3CZEAYeCLI/AAAAAAAABVs/FgpS-ileFOo/s1600/Funny+Lemon+Wallpapers+4.jpg' );
+>>>>>>> 29bacccafbd4eec6d104547847731e44f32bbdf4
 
 INSERT INTO posts
     ( user_post_id, body,created)

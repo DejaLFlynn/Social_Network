@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body, nav{
     background-image: url("https://jooinn.com/images/lemon-slice-2.jpg" );
     background-repeat: no-repeat;
@@ -9,4 +10,9 @@ body, nav{
     display: flex; 
     justify-content: center;
 
+=======
+img {
+    width: 300px;
+    height: 300px;
+>>>>>>> 29bacccafbd4eec6d104547847731e44f32bbdf4
 }
