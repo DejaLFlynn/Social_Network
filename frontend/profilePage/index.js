@@ -1,16 +1,31 @@
-document.addEventListener("DOMContentLoaded", async()=> {
-  try {
-    let res = await axios.get("http://localhost:3000/users")
-    debugger
-  } catch (error) {
-    console.log(error)
+document.addEventListener("DOMContentLoaded", ()=> {
+
+  const getUserHeader = async () => {
+    let img = document.querySelector("#profilePic")
+    let username = document.querySelector("#username")
+    try {
+      let res = await axios.get("http://localhost:3000/users")
+      img.src = res.data.users[0].photo_url
+      username.innerText = res.data.users[0].username
+    } catch (error) {
+      console.log(error)
+    }
   }
+  const getUserPosts = async () => {
+    try {
+      let res = await axios.get("http://localhost:3000/posts")
+      debugger
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  getUserHeader();
+  getUserPosts()
 })
 
 // let form = document.querySelector("form")
 // let email = document.querySelector("#email")
 // let name = document.querySelector("#name")
-// let username = document.querySelector("#username")
 // let age = document.querySelector("#age")
 // let photo = document.querySelector("#photo")
 // let errorAlert = document.querySelector(".error")
