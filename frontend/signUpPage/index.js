@@ -20,7 +20,7 @@ form.addEventListener("submit", async (event) => {
           });
         window.location.href = "../HomePage/index.html"
         sessionStorage.setItem("currentUser", username.value)
-    } catch (error) {
+    } catch (error) {  
       errorAlert.innerText = "Please Enter a Valid Username and Email"
     }
   form.reset()

@@ -14,7 +14,7 @@ const createUser = async (req,res,next) => {
 
 const deleteUser = async (req,res,next) => {
     try {
-        await db.none("DELETE from users WHERE id = $1", req.params.id)
+        await db.none("DELETE from users WHERE username = $1", req.params.id)
         res.status(200).json({
             status: "Success",
             message: "User Deleted"
