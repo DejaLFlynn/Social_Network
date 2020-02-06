@@ -25,3 +25,15 @@ form.addEventListener("submit", async (event) => {
     }
   form.reset()
 })
+
+
+
+
+
+const openForm = () => {
+  document.querySelector(".addPost").style.display = "block";
+}
+
+const closeForm = () => {
+  document.querySelector(".addPost").style.display = "none";
+}
