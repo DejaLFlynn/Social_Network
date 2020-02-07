@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
       console.log(error)
     }
   }
+  
   const getUserPosts = async () => {
     let img = document.querySelector("#postPic")
     let caption = document.querySelector("#caption")
