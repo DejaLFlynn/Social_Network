@@ -19,17 +19,11 @@
   <div class="lSidePanel"></div>
 
   <nav class="navBar">
-    <div class="button homeBtn">
-      <button class="btn"> <i class="fa fa-home"></i> Home</button>
-    </div>
-
-    <div class="search"> 
-      <input type="text" placeholder="Search"> 
-    </div>
-
-    <div class="addHater">
-      <button class="button haterBtn"> <i class="fa fa-plus"> </i> Add </button>
-    </div>
+    <button class="profileButton" onclick="window.location.href = '../profilePage/index.html' ">PROFILE</button>
+    <form action="submit" class="userSearchForm">
+      <input id="searchInput" type="text" placeholder="Search Users">
+    </form>
+    <button class="openPostFormButton" onclick="openForm()">+</button>
   </nav>
 
   <main>
