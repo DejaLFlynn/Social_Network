@@ -1,5 +1,3 @@
-
-
 const getUserHeader = async () => {
   let img = document.querySelector("#profilePic")
   let username = document.querySelector("#username")
@@ -21,7 +19,7 @@ const getUserPosts = async () => {
   try {
     let res = await axios.get("http://localhost:3000/posts")
     img.src = res.data.posts[0].photo_url
-      caption.innerText = res.data.posts[0].body
+    caption.innerText = res.data.posts[0].body
   } catch (error) {
     console.log(error)
   }
@@ -31,6 +29,26 @@ getUserPosts()
 
 
 
+//Add Post Form
+let addPostForm = document.querySelector(".addPostForm")
+
+addPostForm.addEventListener("submit", async (event) => {
+  let image = document.querySelector("#addImageURL")
+  let caption = document.querySelector("#addImageCaption")
+  event.preventDefault()
+    try {
+        let res = await axios.post("http://localhost:3000/posts", {
+        user_post_id: sessionStorage.id, 
+        photo_url: image.value,
+        body: caption.value
+          });
+    } catch (error) {  
+      console.log(error)
+    }
+    addPostForm.reset()
+    closeForm()
+  })
+  
 
 const openForm = () => {
     document.querySelector(".addPostFormContainer").style.display = "block";
