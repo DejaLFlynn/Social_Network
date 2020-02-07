@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let appendDiv = document.querySelector(".addHater")
+    let main = document.querySelector("main")
     let newDivs = document.createElement("div")
     let ul = document.createElement("ul")
     const getAllPosts = async() => {
@@ -9,15 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
             // debugger
             posts.forEach(post=>{
                 let li = document.createElement("li")
+                let img = document.createElement("img")
+                img.src = post.photo_url
                 li.innerText = post.body
+                ul.appendChild(img)
                 ul.appendChild(li)
-            
-                
             })
         
 
             newDivs.appendChild(ul)
-            appendDiv.appendChild(newDivs)
+            main.appendChild(newDivs)
             // debugger
         } catch (err) {
             console.log(err)
