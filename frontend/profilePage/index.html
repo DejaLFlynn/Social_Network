@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="./index.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./index.js" async></script>
   <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../normal.css">
@@ -27,18 +27,7 @@
     <button class="openPostFormButton" onclick="openForm()">+</button>
   </nav>
 
-  <div id="addPostFormContainer">
-      <form  class="addPostForm">
-        <h1>Add Post</h1>
-          
-        <label for="ImageURL"><b>Image URL</b></label>
-        <input type="text" placeholder="Enter Image URL" name="imageURL" required>
-    
-        <button type="submit" class="addPostButton">Post</button>
-        <button type="submit" class="addPostCancelButton" onclick="closeForm()">Cancel</button>
-      </form>
-    </div>
-
+  
   <header>
     <div id="countsDiv">
       <p id="followerCount">Follower Count</p>
@@ -51,7 +40,21 @@
     <p id="caption"></p>
   </header>
   
-  <div class="rSidePanel"></div>
+  
+  <div class="rSidePanel">
+    <div class="addPostFormContainer">
+        <form  class="addPostForm">
+          <h2>ADD POST</h2>
+            
+          <label for="ImageURL"><b>Image URL</b></label>
+          <input id="addImageURL" type="text" placeholder="Enter Image URL" name="imageURL" required>
+      
+          <button type="submit" class="addPostButton">Post</button>
+          <button type="button" class="addPostCancelButton" onclick="closeForm()">Cancel</button>
+        </form>
+      </div>
+  </div>
+
 
   <footer>
     <ul class="footer">

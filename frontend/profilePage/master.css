@@ -57,7 +57,8 @@ body {
     width: 75%;
     border: none;
     cursor: pointer;
-    padding: 0
+    padding: 0;
+    opacity: 0.8
 }
 
 .openPostFormButton {
@@ -73,7 +74,8 @@ body {
     cursor: pointer;
     font-size: 30px;
     font-weight: 500;
-    padding: 0
+    padding: 0;
+    opacity: 0.8
 }
 
 .openPostFormButton:focus, .homePageButton:focus {
@@ -100,7 +102,7 @@ body {
     align-items: flex-end;
 }
 
-.brand {
+/* .brand {
     font-size: 4em;
     transform: rotate(-90deg);
     text-shadow:
@@ -108,7 +110,7 @@ body {
     1px -1px 0 white,
     -1px 1px 0 white,
     1px 1px 0 white;
-}
+} */
 
 header {
     grid-area: header;
@@ -119,7 +121,93 @@ header {
     background-image: url("../images/Right Side Gradient Panel.png");
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
+
+.addPostFormContainer {
+    display: none;
+    position: sticky;
+    margin: 10%;
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+    z-index: 9;
+}
+
+.addPostForm {
+    max-width: 400px;
+    padding: 10%;
+    background-color: rgba( 255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.addPostForm input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.addPostForm input[type=text]{
+    outline: solid #FFD54F 2px
+}
+
+.addPostForm h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+
+.addPostForm label {
+    font-weight: 100;
+    float: left
+}
+
+.addPostButton {
+    background-color: #52B6D5;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    padding: 15px 15px;
+    border: solid #f1f1f1 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.addPostCancelButton {
+    background-color: #F6B605;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    padding: 15px 15px;
+    border: solid #f1f1f1 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.addPostCancelButton:hover, .addPostButton:hover, .openPostFormButton:hover, .homePageButton:hover  {
+    opacity: 1;
+}
+
+.addPostCancelButton:focus, .addPostButton:focus, .openPostFormButton:focus, .homePageButton:focus  {
+    outline:none
+}
+
 
 footer {
     grid-area: footer;
@@ -165,62 +253,3 @@ img {
     height: 300px;  
 }
 
-.openPostForm {
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-  }
-  
-  /* The popup form - hidden by default */
-  .addPostFormContainer {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  
-  /* Add styles to the form container */
-  .form {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form input[type=text] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form input[type=text]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .addPostButton {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-  }
-  
-  /* Add a red background color to the cancel button */
-  .addPostCancelButton {
-    background-color: red;
-  }
-  
-  /* Add some hover effects to buttons */
-  .addPostCancelButton:hover, .addPostButton:hover, .openPostForm:hover {
-    opacity: 1;
-  }
