@@ -24,6 +24,7 @@ CREATE TABLE posts
     id SERIAL PRIMARY KEY,
     user_post_id INTEGER REFERENCES users(id),
     body TEXT,
+    photo_url VARCHAR,
     created TIMESTAMP
 );
 
@@ -57,11 +58,11 @@ VALUES('brutus','leoBrut','27','brutus@pursuit.org','https://thumbs.dreamstime.c
       ('nilber', 'sharky','24', 'nilber@pursuit.org','https://4.bp.blogspot.com/-d4U4_9VYnr0/T3CZEAYeCLI/AAAAAAAABVs/FgpS-ileFOo/s1600/Funny+Lemon+Wallpapers+4.jpg' );
 
 INSERT INTO posts
-    ( user_post_id, body,created)
-VALUES(1, 'sup world', '01/12/2018'),
-    (2, 'hey earth', '02/24/2019'),
-    (3, 'fuuuutuuurrre', '12/25/2017'),
-    (4, 'hi stars', '07/05/2018');
+    ( user_post_id, body,photo_url,created)
+VALUES(1, 'sup world', 'https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/261x193/bf41a0204a7fd1c1a039aff2a3960b29/NY_Be_Like.jpg','01/12/2018'),
+    (2, 'hey earth', 'https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/600x394/91e703c3dd3c119b47ebedd92a7ee609/code-horror.gif','02/24/2019'),
+    (3, 'fuuuutuuurrre', ' https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/620x549/dbee5db2ebc1b5c004b50b77dc62d9e0/Funny-meme.jpg','12/25/2017'),
+    (4, 'hi stars', 'https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/248x204/47e865ba28cd6e4fd66d8c3b19b2a9c4/images-1.jpg', '07/05/2018');
 
 INSERT INTO comments
     (user_comments_id, post_comment_id, body, created )
