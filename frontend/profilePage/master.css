@@ -22,7 +22,7 @@ body {
     margin: 0px;
     min-height: 100%;
     display: grid;
-    grid-template-rows: 100px 2fr 4fr 50px;
+    grid-template-rows: 150px 2fr 4fr 50px;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
         "lmargin nav rmargin"
@@ -82,13 +82,14 @@ body {
     outline: none;
 }
 
-.userSearchForm {
-    width: 100%
-}
-
 #searchInput {
     width: 100%;
+    line-height: 2em;
     text-align: center;
+}
+
+#searchInput:focus {
+    outline: solid #FFD54F 2px
 }
 
 .lSidePanel {

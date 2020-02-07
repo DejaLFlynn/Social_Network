@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
     let main = document.querySelector("main")
     let newDivs = document.createElement("div")
     let ul = document.createElement("ul")
@@ -26,4 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     getAllPosts()
-})
+
+    let addPostForm = document.querySelector(".addPostForm")
+
+    addPostForm.addEventListener("submit", async (event) => {
+      let image = document.querySelector("#addImageURL")
+      let caption = document.querySelector("#addImageCaption")
+      event.preventDefault()
+        try {
+            let res = await axios.post("http://localhost:3000/posts", {
+            user_post_id: sessionStorage.id, 
+            photo_url: image.value,
+            body: caption.value
+              });
+        } catch (error) {  
+          console.log(error)
+        }
+        addPostForm.reset()
+        closeForm()
+      })
+      
+    
+    const openForm = () => {
+        document.querySelector(".addPostFormContainer").style.display = "block";
+      }
+    const closeForm = () =>{
+        document.querySelector(".addPostFormContainer").style.display = "none";
+      }

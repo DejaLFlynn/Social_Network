@@ -22,7 +22,7 @@ body {
     margin: 0px;
     height: 100%;
     display: grid;
-    grid-template-rows: 100px 2fr 50px;
+    grid-template-rows: 150px 2fr 50px;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
         "lmargin nav rmargin"
@@ -92,7 +92,12 @@ body {
 
 #searchInput {
     width: 100%;
+    line-height: 2em;
     text-align: center;
+}
+
+#searchInput:focus {
+    outline: solid #FFD54F 2px
 }
 
 main {
@@ -104,6 +109,88 @@ main {
     background-image: url("../images/Right Side Gradient Panel.png");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.addPostFormContainer {
+    display: none;
+    position: sticky;
+    margin: 10%;
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+    z-index: 9;
+}
+
+.addPostForm {
+    max-width: 400px;
+    padding: 10%;
+    background-color: rgba( 255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.addPostForm input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.addPostForm input[type=text]{
+    outline: solid #FFD54F 2px
+}
+
+.addPostForm h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+
+.addPostForm label {
+    font-weight: 100;
+    float: left
+}
+
+.addPostButton {
+    background-color: #52B6D5;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    padding: 15px 15px;
+    border: solid #f1f1f1 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.addPostCancelButton {
+    background-color: #F6B605;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    padding: 15px 15px;
+    border: solid #f1f1f1 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.addPostCancelButton:hover, .addPostButton:hover, .openPostFormButton:hover, .homePageButton:hover  {
+    opacity: 1;
+}
+
+.addPostCancelButton:focus, .addPostButton:focus, .openPostFormButton:focus, .homePageButton:focus  {
+    outline:none
 }
 
 footer {
