@@ -46,19 +46,11 @@ p {
   text-align: center;
 }
 
-/* 
-.homeContainer {
-  height: 100vh;
-  display: flex;
-  flex-direction: row;/* might change*/
-  /* width: 100%; */
-
 
 .left {
   grid-area: left;
   display: flex;
   justify-content: center;
-  /* background-image: url("./images/LemonBackdrop.png"); */
 }
 
 .right {
