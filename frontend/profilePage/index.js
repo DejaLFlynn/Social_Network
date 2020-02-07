@@ -14,11 +14,14 @@ document.addEventListener("DOMContentLoaded", ()=> {
       console.log(error)
     }
   }
+
   const getUserPosts = async () => {
+    let img = document.querySelector("#postPic")
     let caption = document.querySelector("#caption")
     try {
       let res = await axios.get("http://localhost:3000/posts")
-      caption.innerText = res.data.posts[0].body
+      img.src = res.data.posts[0].photo_url
+       caption.innerText = res.data.posts[0].body
     } catch (error) {
       console.log(error)
     }
