@@ -8,24 +8,24 @@
   <script src="./index.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./master.css">
-  </link>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../normal.css">
-  </link>
-
+  <link rel="stylesheet" href="./master.css">
   <title> BITR Profile</title>
 </head>
 
 <body>
-  <nav>
+  <div class="lSidePanel"></div>
+
+  <nav class="navBar">
     <button id="homeFeed">HOME</button>
     <form action="submit">
       <input id="searchInput" type="text">
       <a href="file:///Users/dejaflynn/Code/6.4_code/labs/Projects/Social_Network/frontend/homePage/index.html">
-     <button id="searchButton"onclick="">SEARCH </button> </a>
-      </form>
-    
+     <button id="searchButton"onclick="">SEARCH USERS</button> </a>
+      </form>  
   </nav>
+
   <header>
     <div id="countsDiv">
       <p id="followerCount">Follower Count</p>
@@ -35,6 +35,7 @@
     <h3 id="username"></h3>
     <img id="profilePic" src="" alt="">
   </header>
+  
   <div id="postsDiv">
     <form id="postsForm"action="submit">
     <img src="" alt="">
@@ -45,6 +46,17 @@
     <ul></ul>
   </form>
   </div>
+
+  <div class="rSidePanel"></div>
+
+  <footer>
+    <ul class="footer">
+        <li><a href=""> About </a></li>
+        <li><a href=""> Developers </a></li>
+        <li id="copyright"> &copy;2020 The Motherf*cking Team </li>
+    </ul>
+  </footer>
+
 </body>
 
 </html>
