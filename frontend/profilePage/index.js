@@ -15,11 +15,11 @@ const getUserHeader = async () => {
 
 const getUserPosts = async () => {
   let img = document.querySelector("#postPic")
-  let caption = document.querySelector("#caption")
+  //let caption = document.querySelector("#caption")
   try {
     let res = await axios.get("http://localhost:3000/posts")
     img.src = res.data.posts[0].photo_url
-    caption.innerText = res.data.posts[0].body
+    //caption.innerText = res.data.posts[0].body
   } catch (error) {
     console.log(error)
   }
@@ -27,7 +27,11 @@ const getUserPosts = async () => {
 getUserHeader();
 getUserPosts()
 
-
+//Follow
+let followButton = document.querySelector("#follow")
+followButton.addEventListener("click", () => {
+  followButton.innerText === "HATE" ? followButton.innerText = "HATING" : followButton.innerText = "HATE"
+})
 
 //Add Post Form
 let addPostForm = document.querySelector(".addPostForm")
