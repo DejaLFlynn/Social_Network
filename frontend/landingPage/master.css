@@ -132,6 +132,7 @@ button {
   color: black;
   padding: 15px;
   border-radius: 8px;
+  cursor: pointer;
   margin-top: 15px;
   margin-bottom: 15px;
   font-weight: 800; 

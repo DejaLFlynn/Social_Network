@@ -23,8 +23,8 @@ CREATE TABLE posts
 (
     id SERIAL PRIMARY KEY,
     user_post_id INTEGER REFERENCES users(id),
-    body TEXT,
     photo_url VARCHAR,
+    body TEXT,
     created TIMESTAMP
 );
 
