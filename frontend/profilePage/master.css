@@ -82,6 +82,10 @@ body {
     outline: none;
 }
 
+.userSearchForm {
+    width: 100%
+}
+
 #searchInput {
     width: 100%;
     line-height: 2em;
@@ -115,7 +119,62 @@ body {
 
 header {
     grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 0 5%
 }
+
+#profileHead {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5% 5% 5% 0;
+    text-align: center
+}
+
+#profileHead #username {
+    margin: 20%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#countsDiv {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 5% 0 5% 0
+}
+
+#countsDiv button {
+    background-color: #52B6D5;
+    color: white;
+    border: solid #FFD54F 2px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+#countsDiv button:hover {
+    background-color: #FFD54F;
+    color: #52B6D5
+} 
+
+main {
+    grid-area: main;
+    display: flex;
+    flex: 25%;
+    padding: 2%
+}
+
 
 .rSidePanel {
     grid-area: rmargin;
@@ -201,11 +260,11 @@ header {
     opacity: 0.8;
 }
 
-.addPostCancelButton:hover, .addPostButton:hover, .openPostFormButton:hover, .homePageButton:hover  {
+.addPostCancelButton:hover, .addPostButton:hover, .openPostFormButton:hover, .homePageButton:hover{
     opacity: 1;
 }
 
-.addPostCancelButton:focus, .addPostButton:focus, .openPostFormButton:focus, .homePageButton:focus  {
+.addPostCancelButton:focus, .addPostButton:focus, .openPostFormButton:focus, .homePageButton:focus, #countsDiv button:focus {
     outline:none
 }
 
@@ -217,21 +276,21 @@ footer {
     padding: 0 10px;
     padding-top: 15px;
     border-top: 1px solid #e6ecf0;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: #1c7599;
     text-decoration: none;
     font-size: 12px;
-  }
-  
-  footer #copyright {
+}
+
+footer #copyright {
     color: #1c7599;
     text-decoration: none;
     font-size: 12px;
-  }
-  
-  .footer {
+}
+
+.footer {
     width: 100%;
     list-style-type: none;
     font-family: "Poppins", "sans-serif";
@@ -241,7 +300,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0 50px;
-  }
+}
 
 
 
@@ -249,6 +308,7 @@ img {
     width: 100px;
     height: 100px;
 }
+
 #postPic{
     width: 300px;
     height: 300px;  

@@ -11,11 +11,10 @@
                 let img = document.createElement("img")
                 img.src = post.photo_url
                 li.innerText = post.body
+                li.setAttribute("class", "caption")
                 ul.appendChild(img)
                 ul.appendChild(li)
             })
-        
-
             newDivs.appendChild(ul)
             main.appendChild(newDivs)
             // debugger
@@ -26,6 +25,7 @@
     
     getAllPosts()
 
+    //Add Post Form
     let addPostForm = document.querySelector(".addPostForm")
 
     addPostForm.addEventListener("submit", async (event) => {
