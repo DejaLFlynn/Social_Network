@@ -2,7 +2,6 @@ let form = document.querySelector("#form");
 let p = document.querySelector("#invalidLogin");
     
 const getUserLogin = async (username) => {
-  debugger
   try {
       let res = await axios.get(`http://localhost:3000/users/${username}`);
       console.log(username)
