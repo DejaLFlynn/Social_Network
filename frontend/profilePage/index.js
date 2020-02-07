@@ -2,28 +2,26 @@ const getUserHeader = async () => {
   let img = document.querySelector("#profilePic")
   let username = document.querySelector("#username")
   try {
-    // let res = await axios.get(`http://localhost:3000/users/${sessionStorage.id}`)
-    // username.innerText = res.data.users.username
-    // img.src = res.data.users.photo_url
-    let res = await axios.get(`http://localhost:3000/users/`)
-    username.innerText = res.data.users[0].username
-    img.src = res.data.users[0].photo_url
+    let res = await axios.get(`http://localhost:3000/users/${sessionStorage.id}`)
+    username.innerText = res.data.user.username
+    img.src = res.data.user.photo_url
   } catch (error) {
     console.log(error)
   }
+
 }
 
 const getUserPosts = async () => {
   let img = document.querySelector("#postPic")
   //let caption = document.querySelector("#caption")
   try {
-    let res = await axios.get("http://localhost:3000/posts")
+    let res = await axios.get(`http://localhost:3000/posts/${sessionStorage.id}`)
     img.src = res.data.posts[0].photo_url
     //caption.innerText = res.data.posts[0].body
   } catch (error) {
     console.log(error)
   }
-}
+} 
 getUserHeader();
 getUserPosts()
 

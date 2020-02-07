@@ -27,7 +27,7 @@ const deletePost = async (req, res, next) => {
 
 const getPostsForUser = async (req, res, next) => {
   try {
-    let posts = await db.any("SELECT * FROM posts WHERE user_posts_id = $1", req.params.id);
+    let posts = await db.any("SELECT * FROM posts WHERE user_post_id = $1", req.params.id);
     res.status(200).json({
       posts,
       status: "success",
