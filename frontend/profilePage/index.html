@@ -8,24 +8,37 @@
   <script src="./index.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./master.css">
-  </link>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../normal.css">
-  </link>
-
-  <title> BITR Profile</title>
+  <link rel="stylesheet" href="./master.css">
+  <title>BITR Profile</title>
 </head>
 
 <body>
-  <nav>
-    <button id="homeFeed">HOME</button>
-    <form action="submit">
-      <input id="searchInput" type="text">
-      <a href="file:///Users/dejaflynn/Code/6.4_code/labs/Projects/Social_Network/frontend/homePage/index.html">
-     <button id="searchButton"onclick="">SEARCH </button> </a>
-      </form>
-    
+  <div class="lSidePanel">
+    <!-- <h1 class="brand">BITR</h1> -->
+  </div>
+
+  <nav class="navBar">
+    <button class="homePageButton" onclick="window.location.href = '../homePage/index.html' ">HOME</button>
+    <form action="submit" class="userSearchForm">
+      <input id="searchInput" type="text" placeholder="Search Users">
+    </form>
+    <button class="openPostFormButton" onclick="openForm()">+</button>
   </nav>
+
+  <div id="addPostFormContainer">
+      <form  class="addPostForm">
+        <h1>Add Post</h1>
+          
+        <label for="ImageURL"><b>Image URL</b></label>
+        <input type="text" placeholder="Enter Image URL" name="imageURL" required>
+    
+        <button type="submit" class="addPostButton">Post</button>
+        <button type="submit" class="addPostCancelButton" onclick="closeForm()">Cancel</button>
+      </form>
+    </div>
+
   <header>
     <div id="countsDiv">
       <p id="followerCount">Follower Count</p>
@@ -33,18 +46,19 @@
       <p id="dislikeCount">Dislike Count</p>
     </div>
     <h3 id="username"></h3>
-    <img id="profilePic" src="" alt="">
+    <img id="profilePic" src="" alt="">  
   </header>
-  <div id="postsDiv">
-    <form id="postsForm"action="submit">
-    <img src="" alt="">
-    <input id="captionInput"type="text" Enter caption>
-    <button id="addPost">Add Post</button>
-    <p id="caption"></p>
-    <button id="dislike"></button>
-    <ul></ul>
-  </form>
-  </div>
+  
+  <div class="rSidePanel"></div>
+
+  <footer>
+    <ul class="footer">
+        <li><a href=""> About </a></li>
+        <li><a href=""> Developers </a></li>
+        <li id="copyright"> &copy;2020 The Motherf*cking Team </li>
+    </ul>
+  </footer>
+
 </body>
 
 </html>
