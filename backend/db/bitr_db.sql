@@ -62,7 +62,16 @@ INSERT INTO posts
 VALUES(1, 'sup world', 'https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/261x193/bf41a0204a7fd1c1a039aff2a3960b29/NY_Be_Like.jpg','01/12/2018'),
     (2, 'hey earth', 'https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/600x394/91e703c3dd3c119b47ebedd92a7ee609/code-horror.gif','02/24/2019'),
     (3, 'fuuuutuuurrre', ' https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/620x549/dbee5db2ebc1b5c004b50b77dc62d9e0/Funny-meme.jpg','12/25/2017'),
-    (4, 'hi stars', 'https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/248x204/47e865ba28cd6e4fd66d8c3b19b2a9c4/images-1.jpg', '07/05/2018');
+    (4, 'hi stars', 'https://trello-attachments.s3.amazonaws.com/5e30eba3c1e3de22ed46fdc5/248x204/47e865ba28cd6e4fd66d8c3b19b2a9c4/images-1.jpg', '07/05/2018'),
+    (4, 'Eat the Rich', '../../frontend/images/NilberHaterPosts/Eat the Rich.jpg','01/01/2019'),
+    (4, 'Walk Faster', '../../frontend/images/NilberHaterPosts/Walk Faster.jpg','01/02/2019'),
+    (4, 'Hack Student Loans', '../../frontend/images/NilberHaterPosts/Hackers Student Loan.jpg','01/03/2019'),
+    (4, 'How Rich People Get Rich', '../../frontend/images/NilberHaterPosts/How Rich People Get Rich.jpg','01/04/2019'),
+    (4, 'Overqualified', '../../frontend/images/NilberHaterPosts/Overqualified.jpg','01/04/2019'),
+    (4, 'Pocahontas WTF', '../../frontend/images/NilberHaterPosts/Pocahontas.jpg','01/05/2019'),
+    (4, 'Task Failed Successfully', '../../frontend/images/NilberHaterPosts/Task Failed Successfully.jpg','01/06/2019'),
+    (4, 'Rainbow Capitalism', '../../frontend/images/NilberHaterPosts/Rainbow Capitalism.jpg','01/07/2019');
+
 
 INSERT INTO comments
     (user_comments_id, post_comment_id, body, created )
@@ -70,6 +79,7 @@ VALUES(2, 1, 'just horrible', '01/10/2020'),
     (3, 4, 'waaaacckkkkk', '01/11/2020'),
     (4, 2, 'I just cant', '01/12/2020'),
     (1, 3, 'blaaahhh over it', '01/13/2020');
+
 INSERT INTO dislikes
     (dislike_user,dislike_post)
 VALUES(1, 1),

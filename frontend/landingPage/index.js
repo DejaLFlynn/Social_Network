@@ -6,7 +6,7 @@ const getUserLogin = async (username) => {
       let res = await axios.get(`http://localhost:3000/users/${username}`);
       console.log(username)
       if (res.data.user) {
-        sessionStorage.setItem("currentUser", username);
+        sessionStorage.setItem("username", username);
         sessionStorage.setItem("id", res.data.user.id)
         window.location.href = "../HomePage/index.html"
       } 

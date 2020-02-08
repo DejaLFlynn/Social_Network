@@ -27,7 +27,7 @@ const deleteUser = async (req,res,next) => {
 
 const getUser = async (req,res,next) => {
     try {
-        let user = await db.one("SELECT * from users WHERE id = $1", req.params.id)
+        let user = await db.one("SELECT * from users WHERE username = $1", req.params.id)
         res.status(200).json({
             user,
             status: "Success",

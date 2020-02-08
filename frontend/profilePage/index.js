@@ -2,7 +2,7 @@ const getUserHeader = async () => {
   let img = document.querySelector("#profilePic")
   let username = document.querySelector("#username")
   try {
-    let res = await axios.get(`http://localhost:3000/users/${sessionStorage.id}`)
+    let res = await axios.get(`http://localhost:3000/users/${sessionStorage.username}`)
     username.innerText = res.data.user.username
     img.src = res.data.user.photo_url
   } catch (error) {
@@ -16,7 +16,9 @@ const getUserPosts = async () => {
   //let caption = document.querySelector("#caption")
   try {
     let res = await axios.get(`http://localhost:3000/posts/${sessionStorage.id}`)
-    img.src = res.data.posts[0].photo_url
+    debugger
+
+    img.src = res.data.posts[3].photo_url
     //caption.innerText = res.data.posts[0].body
   } catch (error) {
     console.log(error)
@@ -53,7 +55,8 @@ addPostForm.addEventListener("submit", async (event) => {
   
 
 const openForm = () => {
-    document.querySelector(".addPostFormContainer").style.display = "block";
+    document.querySelector(".addPostFormContainer").style.display === "none" ? document.querySelector(".addPostFormContainer").style.display = "block" : document.querySelector(".addPostFormContainer").style.display = "none"
+
   }
 const closeForm = () =>{
     document.querySelector(".addPostFormContainer").style.display = "none";
@@ -94,9 +97,3 @@ const closeForm = () =>{
 // const captionInputBox = async()=>{
 
 // }
-// const addFullPost = async()=>{
-
-// }
-
-
-// })
