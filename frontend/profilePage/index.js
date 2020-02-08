@@ -12,13 +12,18 @@ const getUserHeader = async () => {
 }
 
 const getUserPosts = async () => {
-  let img = document.querySelector("#postPic")
+  let main = document.querySelector("main")
   //let caption = document.querySelector("#caption")
   try {
     let res = await axios.get(`http://localhost:3000/posts/${sessionStorage.id}`)
-
-    img.src = res.data.posts[0].photo_url
-    //caption.innerText = res.data.posts[0].body
+    let posts  = res.data.posts
+    posts.forEach (image => {
+      let img = document.createElement("img")
+      let div = document.createElement("div")
+      img.src = image.photo_url
+      div.appendChild(img)
+      main.appendChild(div)
+    })
   } catch (error) {
     console.log(error)
   }
