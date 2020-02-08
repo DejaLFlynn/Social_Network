@@ -18,7 +18,7 @@ form.addEventListener("submit", async (event) => {
           age: age.value,
           photo_url: photo.value
           });
-        sessionStorage.setItem("currentUser", username.value)
+        sessionStorage.setItem("username", username.value)
         sessionStorage.setItem("id", res.data.user.id)
         window.location.href = "../HomePage/index.html"
     } catch (error) {  

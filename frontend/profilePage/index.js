@@ -2,7 +2,7 @@ const getUserHeader = async () => {
   let img = document.querySelector("#profilePic")
   let username = document.querySelector("#username")
   try {
-    let res = await axios.get(`http://localhost:3000/users/${sessionStorage.id}`)
+    let res = await axios.get(`http://localhost:3000/users/${sessionStorage.username}`)
     username.innerText = res.data.user.username
     img.src = res.data.user.photo_url
   } catch (error) {
@@ -53,7 +53,8 @@ addPostForm.addEventListener("submit", async (event) => {
   
 
 const openForm = () => {
-    document.querySelector(".addPostFormContainer").style.display = "block";
+    document.querySelector(".addPostFormContainer").style.display === "none" ? document.querySelector(".addPostFormContainer").style.display = "block" : document.querySelector(".addPostFormContainer").style.display = "none"
+
   }
 const closeForm = () =>{
     document.querySelector(".addPostFormContainer").style.display = "none";

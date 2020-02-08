@@ -47,8 +47,8 @@
       
     
     const openForm = () => {
-        document.querySelector(".addPostFormContainer").style.display = "block";
-      }
+      document.querySelector(".addPostFormContainer").style.display === "none" ? document.querySelector(".addPostFormContainer").style.display = "block" : document.querySelector(".addPostFormContainer").style.display = "none"
+    }
     const closeForm = () =>{
         document.querySelector(".addPostFormContainer").style.display = "none";
       }
