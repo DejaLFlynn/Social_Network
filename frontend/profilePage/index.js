@@ -16,7 +16,9 @@ const getUserPosts = async () => {
   //let caption = document.querySelector("#caption")
   try {
     let res = await axios.get(`http://localhost:3000/posts/${sessionStorage.id}`)
-    img.src = res.data.posts[0].photo_url
+    debugger
+
+    img.src = res.data.posts[3].photo_url
     //caption.innerText = res.data.posts[0].body
   } catch (error) {
     console.log(error)
@@ -95,9 +97,3 @@ const closeForm = () =>{
 // const captionInputBox = async()=>{
 
 // }
-// const addFullPost = async()=>{
-
-// }
-
-
-// })
