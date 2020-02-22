@@ -4,7 +4,7 @@
     const getAllPosts = async() => {
         try {
             let res = await axios.get(`http://localhost:3000/posts`)
-            let posts = res.data.posts
+            let posts = res.data.posts.reverse()
             // debugger
             posts.forEach(post=>{
                 let li = document.createElement("li")

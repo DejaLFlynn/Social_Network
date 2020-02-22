@@ -16,12 +16,15 @@ const getUserPosts = async () => {
   //let caption = document.querySelector("#caption")
   try {
     let res = await axios.get(`http://localhost:3000/posts/${sessionStorage.id}`)
-    let posts  = res.data.posts
+    let posts  = res.data.posts.reverse()
     posts.forEach (image => {
       let img = document.createElement("img")
+      let p = document.createElement("p")
       let div = document.createElement("div")
       img.src = image.photo_url
+      p.innerText = image.body
       div.appendChild(img)
+      div.appendChild(p)
       main.appendChild(div)
     })
   } catch (error) {
