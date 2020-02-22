@@ -35,7 +35,9 @@ body {
 
 .lSidePanel {
     grid-area: lmargin;
-    background-image: url("../images/Left Side Gradient Panel.png");
+    background: rgb(255,231,57);
+    background: linear-gradient(90deg, rgba(255,231,57,1) 0%, rgba(14,165,160,1) 50%, rgba(67,101,162,1) 100%);
+    /* background-image: url("../images/Left Side Gradient Panel.png"); */
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -108,9 +110,19 @@ main {
 
 }
 
+ul img {
+    margin: 5px;
+}
+
+ul li {
+    margin: 5px
+}
+
 .rSidePanel {
     grid-area: rmargin;
-    background-image: url("../images/Right Side Gradient Panel.png");
+    background: rgb(255,231,57);
+    background: linear-gradient(270deg, rgba(255,231,57,1) 0%, rgba(14,165,160,1) 50%, rgba(67,101,162,1) 100%);
+    /* background-image: url("../images/Right Side Gradient Panel.png"); */
     background-size: cover;
     background-repeat: no-repeat;
 }
